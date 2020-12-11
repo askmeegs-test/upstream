@@ -33,7 +33,7 @@ def run(server_class=HTTPServer, handler_class=S, port=8080):
     logging.basicConfig(level=logging.INFO)
     server_address = ('', port)
     httpd = server_class(server_address, handler_class)
-    logging.info('Starting server...\n')
+    logging.info('⭐️ THIS IS ASKMEEGS_TEST FORK - Starting server...\n')
 
     # start listening
     try:
