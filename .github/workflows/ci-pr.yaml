@@ -15,6 +15,9 @@ jobs:
     - name: Build + Deploy PR images to GKE
       timeout-minutes: 20
       run: |
+        echo What is in the src directory
+        cat src/helloserver/server.py
+
         NAMESPACE="pr${PR_NUMBER}"
         echo "::set-env name=NAMESPACE::$NAMESPACE"
 
@@ -25,9 +28,6 @@ jobs:
         metadata:
           name: $NAMESPACE
         EOF
-
-        echo What is in the src directory
-        cat src/helloserver/server.py
 
         echo Deploying application
         skaffold config set --global local-cluster false
