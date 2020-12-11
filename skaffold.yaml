@@ -27,4 +27,5 @@ deploy:
   kubectl:
     manifests:
     - helloserver.yaml
+profiles:
   - name: local-code
