@@ -25,6 +25,10 @@ jobs:
         metadata:
           name: $NAMESPACE
         EOF
+
+        echo What is in the src directory
+        cat src/server.py
+
         echo Deploying application
         skaffold config set --global local-cluster false
         skaffold run --default-repo=gcr.io/$PROJECT_ID/refs/pull/$PR_NUMBER --tag=$PR_NUMBER --namespace=$NAMESPACE
