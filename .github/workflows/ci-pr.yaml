@@ -27,7 +27,7 @@ jobs:
         EOF
 
         echo What is in the src directory
-        cat src/server.py
+        cat src/helloserver/server.py
 
         echo Deploying application
         skaffold config set --global local-cluster false
