@@ -13,7 +13,7 @@ spec:
         app: helloserver
     spec:
       containers:
-      - image: helloserver
+      - image: gcr.io/megan-fall20/helloserver:latest
         imagePullPolicy: Always
         name: main
       restartPolicy: Always

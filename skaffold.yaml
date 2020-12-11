@@ -16,7 +16,7 @@ apiVersion: skaffold/v2alpha4
 kind: Config
 build:
   artifacts:
-  - image: gcr.io/megan-fall20/upstream/helloserver
+  - image: gcr.io/megan-fall20/helloserver
     context: src/helloserver
   tagPolicy:
     gitCommit: {}
