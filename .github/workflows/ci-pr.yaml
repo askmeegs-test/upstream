@@ -6,7 +6,6 @@ on:
 jobs:
   deployment-tests:
     runs-on: self-hosted
-    needs: code-tests
     strategy:
       matrix:
         profile: ["local-code"]
